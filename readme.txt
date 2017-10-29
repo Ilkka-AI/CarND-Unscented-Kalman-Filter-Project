@@ -1,12 +1,9 @@
 
 PROJECT DESCRIPTION
-The project "unscented Kalman filter" is based on the same structure as the extended Kalman filter.
+The project "unscented Kalman filter" is based on the same structure as the extended Kalman filter. The filter is used to track a vehicle by fusing radar and lidar measurements. The unscented Kalman filter allows for non-linear motion models. The resulting non-linear probability distribution and its transform is handled by using sigma points to represent the distribution. 
+
 It uses a main file that calls a function called ProcessMeasurement. Anything important happens in this function. The function is part of the class ukf.
 
-
-C++ QUIZZES
-The quizzes including the solutions of them are included in the file ukf.cpp. They are individual functions, which don't need any special environment. The solution of the quizzes are given here and also the expected results.
-The quizzes can easily evaluated: if every value of the student solution (vectors and matrices) differs less than 0.001 from the original solution, the quizz is passed, otherwise failed.
 
 
 
