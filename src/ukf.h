@@ -58,6 +58,9 @@ public:
   ///* Weights of sigma points
   VectorXd weights_;
 
+  MatrixXd R_radar_ ;
+  MatrixXd R_lidar_ ;
+
   ///* State dimension
   int n_x_;
 
@@ -67,6 +70,12 @@ public:
   ///* Sigma point spreading parameter
   double lambda_;
 
+  VectorXd NIS_values_radar;
+  VectorXd NIS_values_lidar;
+  int k_r;
+  int k_l;
+  float NIS;
+  float EPS;
 
   /**
    * Constructor
