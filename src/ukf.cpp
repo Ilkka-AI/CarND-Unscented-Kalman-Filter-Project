@@ -104,16 +104,14 @@ void UKF::ProcessMeasurement(MeasurementPackage meas_package) {
   }
    weights_=weights;
    
-   x_ << 0,0,0	,0,0;
+   x_ << EPS,EPS,0,0,0;
    P_<< 1,0,0,0,0,
        0,1,0,0,0,
        0,0,1,0,0,
        0,0,0,1,0,
        0,0,0,0,1; 
-   if (fabs(x_(0)) < EPS and fabs(x_(1)) < EPS){
-		x_(0) = EPS;
-		x_(1) = EPS;
- }  
+   
+ 
 }
   
  else if(meas_package.sensor_type_ == MeasurementPackage::RADAR & use_radar_==true){
@@ -375,8 +373,8 @@ void UKF::UpdateRadar(MeasurementPackage meas_package) {
   
   NIS=z_diff.transpose()*Sinv*z_diff;
 
-  std::cout << "S: " << std::endl << S << std::endl;
-  std::cout << "S inv: " << std::endl << Sinv << std::endl;
+  //std::cout << "S: " << std::endl << S << std::endl;
+  //std::cout << "S inv: " << std::endl << Sinv << std::endl;
 
   //print result
   //std::cout << "Updated state x: " << std::endl << x_ << std::endl;
