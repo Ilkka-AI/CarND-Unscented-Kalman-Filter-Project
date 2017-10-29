@@ -135,7 +135,7 @@ else if(meas_package.sensor_type_ == MeasurementPackage::LASER & use_laser_==tru
     NIS_values_lidar(k_l)=NIS;
     k_l++;
 
-    //cout<<"NIS values lidar" << NIS_values_lidar << endl;
+    cout<<"NIS values lidar" << NIS_values_lidar << endl;
 }
 
 }
