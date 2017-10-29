@@ -375,6 +375,8 @@ void UKF::UpdateRadar(MeasurementPackage meas_package) {
   
   NIS=z_diff.transpose()*Sinv*z_diff;
 
+  std::cout << "S: " << std::endl << S << std::endl;
+  std::cout << "S inv: " << std::endl << Sinv << std::endl;
 
   //print result
   //std::cout << "Updated state x: " << std::endl << x_ << std::endl;
